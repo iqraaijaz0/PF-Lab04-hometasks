@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main(){
+int account_balance;
+int amount;
+int remaining_amount;
+printf("enter account balance:");
+scanf("%d",&account_balance);
+printf("enter amount:"); 
+scanf("%d",&amount);
+remaining_amount=account_balance-amount;
+if(amount%500==0)
+{
+
+	if(amount<=25000)
+	{
+	if(amount<=account_balance) 	
+	{
+		printf("Withdrawal successful = %d\n", amount);
+                printf("Remaining amount = %d\n", remaining_amount);
+	}
+else{
+		
+		printf("Error:Insufficient Balance:");
+	}
+
+	
+	}else{
+	
+	
+	printf("Maximum daily withdrawal limit is 25000");
+	}
+	}
+	else{
+	printf("Amount must be a multiple of 500");
+	}
+
+			
+	return 0;
