@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int main(){
+    int unit_consumed;
+    int bill;
+
+    printf("Enter units consumed: ");
+    scanf("%d", &unit_consumed);
+
+    
+    if(unit_consumed <= 100) {
+        bill = unit_consumed * 5;
+    }
+    
+    else if(unit_consumed <= 200) {
+        bill = 500 + (unit_consumed - 100) * 8;
+    }
+ 
+    else if(unit_consumed <= 400) {
+        bill = 1300 + (unit_consumed - 200) * 12;
+    }
+  
+    else {
+        bill = 3700 + (unit_consumed - 400) * 15;
+    }
+
+    
+    printf("Total Bill: Rs. %d\n", bill);
+
+    return 0;
+}
+
